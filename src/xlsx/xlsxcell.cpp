@@ -29,6 +29,7 @@
 #include "xlsxutility_p.h"
 #include "xlsxworksheet.h"
 #include "xlsxworkbook.h"
+#include "xlsxrichstring.h"
 #include <QDateTime>
 
 QT_BEGIN_NAMESPACE_XLSX
@@ -173,6 +174,14 @@ bool Cell::isRichString() const
         return false;
 
     return d->richString.isRichString();
+}
+
+
+RichString Cell::richString() const
+{
+    Q_D(const Cell);
+
+    return d->richString;
 }
 
 QT_END_NAMESPACE_XLSX

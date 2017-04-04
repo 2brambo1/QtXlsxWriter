@@ -36,6 +36,7 @@ class Format;
 class CellFormula;
 class CellPrivate;
 class WorksheetPrivate;
+class RichString;
 
 class Q_XLSX_EXPORT Cell
 {
@@ -53,6 +54,7 @@ public:
     CellType cellType() const;
     QVariant value() const;
     Format format() const;
+    RichString richString() const;
 
     bool hasFormula() const;
     CellFormula formula() const;
